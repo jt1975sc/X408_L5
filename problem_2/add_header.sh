@@ -4,5 +4,5 @@
 files_i_care_about=( $(ls *.c))
 
 for t in ${!files_i_care_about[@]}; do
-    echo '**Propety of Blaa.co 1882**' | cat - $t > temp && mv temp $t
+    echo '**Propety of Blaa.co 1882**' |  cat - ${files_i_care_about[$t]} > temp && mv temp ${files_i_care_about[$t]}
 done
