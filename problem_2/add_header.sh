@@ -1,8 +1,5 @@
 #!/usr/bin/bash
 
-files_i_care_about=( *.c )
-
-for file in "${files_i_care_about[@]}"; do
+for file in *.c; do
     echo '**Property of Blaa.co 1882**' | cat - "$file" > temp && mv temp "$file"
 done
-
